@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gymmembersapplication.NewMemberController">
+   <children>
+      <Label text="Register member" textFill="#0c2135">
+         <font>
+            <Font name="Nirmala UI Bold" size="32.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="40.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Name" textFill="#686868">
+         <VBox.margin>
+            <Insets bottom="4.0" left="40.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Nirmala UI" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="registerNameTextField" prefHeight="40.0" promptText="Firstname Lastname">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+      <Label layoutX="50.0" layoutY="97.0" text="Social Security Number" textFill="#686868">
+         <font>
+            <Font name="Nirmala UI" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="4.0" left="40.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="registerSsnTextField" prefHeight="40.0" promptText="YYMMDD-XXXX">
+         <VBox.margin>
+            <Insets left="40.0" right="40.0" />
+         </VBox.margin>
+      </TextField>
+   </children>
+</VBox>
