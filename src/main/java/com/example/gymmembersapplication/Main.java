@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    public static final boolean testMode = true;
+    public static final boolean testMode = false;
 
     @Override
     public void start(Stage stage) throws IOException {

@@ -37,7 +37,6 @@ public class IOManager {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) {
             out.writeObject(data);
         }
-
     }
 
     /**
@@ -110,9 +109,9 @@ public class IOManager {
      */
     public boolean isValidSocialSecurityNumber(String ssn) {
         String idPattern1 = "[0-9]{6}-[0-9]{4}";
-        String idPattern3 = "[0-9]{10}";
+        String idPattern2 = "[0-9]{10}";
         return Pattern.matches(idPattern1, ssn)
-                || Pattern.matches(idPattern3, ssn);
+                || Pattern.matches(idPattern2, ssn);
     }
 
     /**

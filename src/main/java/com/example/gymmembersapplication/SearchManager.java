@@ -27,7 +27,6 @@ public class SearchManager {
         String errorMessage;
         IOManager ioManager = new IOManager();
 
-
         if (validInput.length() < minLength || validInput.isBlank()) {
             errorMessage = "Input must be at least " + minLength + " characters long";
             throw new IllegalArgumentException(errorMessage);
