@@ -110,13 +110,9 @@ public class IOManager {
      */
     public boolean isValidSocialSecurityNumber(String ssn) {
         String idPattern1 = "[0-9]{6}-[0-9]{4}";
-        //String idPattern2 = "[0-9]{8}-[0-9]{4}";
         String idPattern3 = "[0-9]{10}";
-        //String idPattern4 = "[0-9]{12}";
         return Pattern.matches(idPattern1, ssn)
-                //|| Pattern.matches(idPattern2, ssn)
                 || Pattern.matches(idPattern3, ssn);
-                //|| Pattern.matches(idPattern4, ssn);
     }
 
     /**

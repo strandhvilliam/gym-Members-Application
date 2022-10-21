@@ -43,7 +43,6 @@ public class MainController implements Initializable {
     private TableColumn<Member, String> buttonColumn;
 
     private List<Member> memberList = new ArrayList<>();
-    private SearchManager searchManager;
 
     /**
      * Event that is triggered when the user clicks enter in the search text field.
@@ -52,7 +51,7 @@ public class MainController implements Initializable {
     public void searchEvent() {
         String input;
         input = searchTextField.getText();
-        searchManager = new SearchManager(memberList);
+        SearchManager searchManager = new SearchManager(memberList);
 
         try {
             Member member = searchManager.search(input);
@@ -175,6 +174,7 @@ public class MainController implements Initializable {
             return cell;
         });
 
+        //serializing data
         IOManager ioManager = new IOManager();
         try {
             ioManager.serializeData("data.ser", memberList);

@@ -12,11 +12,9 @@ public abstract class Person implements Serializable {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
-
     public String getName() {
         return name;
     }
-
     public String getSocialSecurityNumber() {
         return socialSecurityNumber;
     }

@@ -38,10 +38,10 @@ public class IOManagerTest {
         textData = ioManager.loadFromTextFile(filename);
         assert(textData.size() == 14);
         assert(textData.get(0).getName().equals("Alhambra Aromes"));
-        assert(textData.get(0).getSocialSecurityNumber().equals("7703021234"));
+        assert(textData.get(0).getSocialSecurityNumber().equals("770302-1234"));
         assert(textData.get(0).getMembershipDate().equals(LocalDate.of(2022, 7, 1)));
         assert(textData.get(1).getName().equals("Bear Belle"));
-        assert(textData.get(1).getSocialSecurityNumber().equals("8204021234"));
+        assert(textData.get(1).getSocialSecurityNumber().equals("820402-1234"));
         assert(textData.get(1).getMembershipDate().equals(LocalDate.of(2019, 12, 2)));
 
         Throwable loadException = assertThrows(IOException.class,
@@ -75,9 +75,8 @@ public class IOManagerTest {
     void isValidSocialSecurityNumberTest() {
         assert(ioManager.isValidSocialSecurityNumber("1234567890"));
         assert(ioManager.isValidSocialSecurityNumber("123456-7890"));
-        assert(ioManager.isValidSocialSecurityNumber("111234567890"));
-        assert(ioManager.isValidSocialSecurityNumber("11123456-7890"));
-
+        assert(!ioManager.isValidSocialSecurityNumber("11123456-7890"));
+        assert(!ioManager.isValidSocialSecurityNumber("111234567890"));
         assert(!ioManager.isValidSocialSecurityNumber("123456"));
         assert(!ioManager.isValidSocialSecurityNumber("12345678911111"));
         assert(!ioManager.isValidSocialSecurityNumber("1234567890-"));
