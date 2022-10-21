@@ -51,26 +51,4 @@ public class SearchManagerTest {
                 () -> sm.validateInput(" "));
     }
 
-
-
-
 }
-
-
-
-/*
-
-calling method
-
-boolean test = true;
-
-if (test) {
-    userSearch = "";
-    List<Member> testList = new ArrayList<>();
-    SearchManager.search(userSearch, testList);
-} else {
-    userSearch = textField.getText();
-    List<Member> searchList = new ArrayList<>(memberList);
-    SearchManager.search(userSearch, memberList);
-    }
- */
